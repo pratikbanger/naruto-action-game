@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: darkgray;
+    overflow: hidden;
+}
+
+.gameContainer {
+    background-image: url(village.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.gameOver {
+    visibility: hidden;
+    position: relative;
+    top: 100px;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+.gameOver img {
+    width: 400px;
+}
+
+.playAgain {
+    color: black;
+    font-size: 25px;
+    margin-top: 10px;
+    font-family: fantasy;
+    animation: blink 1.5s linear infinite;
+}
+
+.gameOver a {
+    text-decoration: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+/* Naruto CSS */
+.narutoStanding {
+    background-image: url(running.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 215px;
+    height: 150px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    /* transition: all 1s ease; */
+}
+
+.leftRunning {
+    background-image: url(leftRunning.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 215px;
+    height: 150px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    /* transition: all 1s ease; */
+}
+
+.narutoAnimation {
+    animation: naruto 0.7s linear;
+}
+
+@keyframes naruto {
+    0% {
+        bottom: 20px;
+    }
+
+    25% {
+        bottom: 175px;
+    }
+
+    50% {
+        bottom: 350px;
+    }
+
+    75% {
+        bottom: 175px;
+    }
+
+    100% {
+        bottom: 20px;
+    }
+}
+
+/* Villain CSS */
+.villaingObstacle {
+    background-image: url(villain.gif);
+    background-size: cover;
+    position: absolute;
+    width: 215px;
+    height: 150px;
+    bottom: 20px;
+    right: 10px;
+}
+
+.villainAnimation {
+    animation: villain 6s linear infinite;
+}
+
+@keyframes villain {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -10%;
+    }
+}
+
+.playMusic {
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: #fade3b;
+    color: black;
+}
+
+.fa-solid {
+    cursor: pointer;
+}
